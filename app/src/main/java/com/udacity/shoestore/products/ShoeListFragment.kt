@@ -10,34 +10,26 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
-import com.udacity.shoestore.databinding.ProductItemBinding
+import com.udacity.shoestore.databinding.FragmentProductItemBinding
 
 class ShoeListFragment : Fragment() {
 
     private val sharedViewModel: ShoeListViewModel by activityViewModels()
     private lateinit var binding: FragmentShoeListBinding
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding?.apply {
-            viewModel = sharedViewModel
-        }
-    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        val binding: FragmentShoeListBinding = DataBindingUtil.inflate(
-//            inflater, R.layout.fragment_shoe_list, container, false
-//        )
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_list, container, false
         )
 
         sharedViewModel.listProducts.observe(viewLifecycleOwner, Observer { products ->
             products.forEach { product ->
-                val itemBinding: ProductItemBinding =
-                    DataBindingUtil.inflate(inflater, R.layout.product_item, container, true)
+                val itemBinding: FragmentProductItemBinding =
+                    DataBindingUtil.inflate(inflater, R.layout.fragment_product_item, container, false)
                 itemBinding.shoe = product
                 binding.productsViewgroup.addView(itemBinding.root)
             }
@@ -53,6 +45,13 @@ class ShoeListFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding?.apply {
+            lifecycleOwner = viewLifecycleOwner
+            viewModel = sharedViewModel
+        }
+    }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.logout_menu, menu)

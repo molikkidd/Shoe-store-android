@@ -19,8 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/small_margin"
-        android:padding="@dimen/small_margin"
-        android:theme="@style/Platform.MaterialComponents">
+        android:padding="@dimen/small_margin">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/container_product"
@@ -33,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:text="@{shoe.company}"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -98,7 +97,7 @@
                 android:text="@string/size_label"
                 android:textAllCaps="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/white_text_color"
+                android:textColor="@color/black_text_color"
                 app:layout_constraintEnd_toStartOf="@+id/size_value"
                 app:layout_constraintTop_toBottomOf="@id/product_description" />
 
@@ -112,7 +111,7 @@
                 android:paddingRight="12dp"
                 android:paddingBottom="8dp"
                 android:text="@{@string/shoe_size_format(shoe.size)}"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white_text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/size_text"

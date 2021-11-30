@@ -30,9 +30,9 @@ class MainActivity : AppCompatActivity() {
             nc.graph.startDestination -> {
                 supportActionBar?.setDisplayHomeAsUpEnabled(false)
             }
-//            R.id.shoeListFragment -> {
-//                supportActionBar?.setDisplayHomeAsUpEnabled(false)
-//            }
+            R.id.shoeListFragment2 -> {
+                supportActionBar?.setDisplayHomeAsUpEnabled(false)
+            }
         }
     }
 //    connect Navi UI to Navi Controller

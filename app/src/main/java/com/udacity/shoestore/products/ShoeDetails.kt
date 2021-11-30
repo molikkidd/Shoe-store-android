@@ -16,6 +16,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailsBinding
+import com.udacity.shoestore.databinding.FragmentShoeListBinding
+
 import com.udacity.shoestore.models.Shoe
 
 
@@ -23,18 +25,19 @@ class ShoeDetails : Fragment() {
     private val sharedViewModel: ShoeListViewModel by activityViewModels()
     private lateinit var binding: FragmentShoeDetailsBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        super.onCreate(savedInstanceState)
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_details, container, false
         )
-        binding.shoe = Shoe("", 0.0, "", "")
-        binding.shoeListViewModel = sharedViewModel
-        binding.lifecycleOwner = viewLifecycleOwner
-
+        sharedViewModel.eventSave.observe(viewLifecycleOwner, Observer { isSaving ->
+            if (isSaving) {
+                onSaving()
+            }
+        })
         binding.cancelButton.setOnClickListener { view: View ->
             sharedViewModel.savedShoe()
             view.findNavController().navigateUp()
@@ -42,14 +45,22 @@ class ShoeDetails : Fragment() {
         return binding.root
     }
 //    ACTIONS FOR ADDING AND SAVING A SHOE TO THE LIST
-
-    private fun onSaving() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding?.apply {
+            lifecycleOwner = viewLifecycleOwner
+            shoeListViewModel = sharedViewModel
+            shoe = Shoe("", 0.0, "", "")
+        }
+    }
+    fun onSaving() {
             NavHostFragment.findNavController(this)
                 .navigate(ShoeDetailsDirections.actionShoeDetailsToShoeListFragment2())
         sharedViewModel.savedShoe()
     }
 
 }
+
 @BindingAdapter("android:text")
 fun bindDoubleInText(tv: EditText, value: Double) {
     tv.setText(value.toString())

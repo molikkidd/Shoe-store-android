@@ -30,7 +30,6 @@ class ShoeListViewModel : ViewModel() {
     }
 
     fun saveProduct(shoe: Shoe) {
-        Log.e("Tag", String.format("something", shoe))
         onSaveShoe()
             listProducts.value?.add(shoe)
             _listProducts.value = _listProducts.value
