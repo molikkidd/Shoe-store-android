@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.udacity.shoestore.products.ShoeListFragment">
+
+    <!--    I decided to use Constraint Layout because this screen is more   -->
+    <!--    complex and it gives me more control over each element position. -->
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.products.ShoeListViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/small_margin"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:theme="@style/Theme.MaterialComponents"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:padding="@dimen/small_margin">
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="@dimen/small_margin"
+                    android:background="@android:color/holo_orange_light"
+                    android:drawableStart="@drawable/ic_add"
+                    android:text="Order By"
+                    android:theme="@android:style/Widget.Material.Spinner"
+                    app:layout_constraintBottom_toBottomOf="@+id/divider_view"
+                    app:layout_constraintEnd_toStartOf="@+id/divider_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/divider_view"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <View
+                    android:id="@+id/divider_view"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#000"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/filter_text"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:background="@android:color/holo_orange_light"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Filter"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:theme="@style/AppTheme"
+                    app:drawableStartCompat="@drawable/ic_add"
+                    app:layout_constraintBottom_toBottomOf="@+id/divider_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider_view"
+                    app:layout_constraintTop_toTopOf="@+id/divider_view" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:background="@android:color/holo_orange_light"
+            android:paddingBottom="@dimen/bottom_extra_space"
+            android:theme="@android:style/Widget.ScrollView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view">
+
+            <LinearLayout
+                android:id="@+id/products_viewgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/empty_list"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/create_shoe_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/add_product"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

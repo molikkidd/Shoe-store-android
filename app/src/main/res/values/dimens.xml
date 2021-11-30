@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="big_margin">32dp</dimen>
+    <dimen name="bottom_extra_space">56dp</dimen>
+
+    <!--Instructions-->
+    <dimen name="profile_image_size">42dp</dimen>
+</resources>

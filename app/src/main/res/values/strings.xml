@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="errorEmail">Please make sure email has been entered</string>
+    <string name="errorPassword">Please make sure password has been entered</string>
+    <string name="welcome">Welcome</string>
+    <string name="instructions">Instructions</string>
+    <string name="product_list">Store</string>
+    <string name="contact">Contact</string>
+    <string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nunc
+felis, suscipit vitae ipsum quis, rhoncus commodo nulla. Suspendisse sed ornare felis, et congue
+ligula. Donec lobortis arcu eget mi feugiat, ut posuere massa vehicula. Praesent iaculis, quam
+eget ornare scelerisque, velit purus hendrerit nibh, id porta nibh lacus eleifend felis. Donec
+non turpis tempor, dapibus elit eget, aliquam orci. Mauris quis diam eget mauris egestas
+faucibus.
+\n\nNullam accumsan, lacus et eleifend eleifend, sem enim tincidunt enim, sed ullamcorper arcu orci eu nisl. Praesent eu volutpat enim.</string>
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="email_address">shoestore@fake.com</string>
+    <string name="phone_number">+1–202–555–0130</string>
+    <string name="address_value">2932 Richards Avenue - Tracy, CA</string>
+    <string name="logout">Logout</string>
+    <string name="favorite">Like</string>
+    <string name="share">Share</string>
+    <string name="empty_list">Shoes List is Empty</string>
+    <string name="best_seller">Best Seller of 2021</string>
+    <string name="instruction_subtitle">Read the instructions below</string>
+    <string name="show_case">Take a look to our products</string>
+    <string name="instruction_navigation">Take a look to the instructions</string>
+    <string name="welcome_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sapien libero, auctor a ex at, varius egestas nibh. Curabitur accumsan elementum orci eu mattis. Nam non porttitor quam, quis condimentum sapien. Aliquam sit amet fermentum nisi, ac scelerisque augue.</string>
+    <string name="product_details">Product Details</string>
+    <string name="product_description">This low-heeled hook-and-eye sandal is made from dark turquoise denim.  It has a sleek appearance.  It is accented with beads and a large bow.</string>
+    <string name="size_label">Size</string>
+    <string name="shoe_size_format">%.1f</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="brand_name">Brand Name</string>
+    <string name="product_description_label">Description</string>
+    <string name="add_shoe">Add Shoe</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="save_text">Save</string>
+    <string name="errorShoeName">Please make sure a shoe name has been entered</string>
+    <string name="errorBrandName">Please make sure a brand name has been entered</string>
+    <string name="errorSize">Please make sure a valid size has been entered</string>
+    <string name="errorDescription">Please make sure a description has been entered</string>
+    <string name="add_product">Add Product</string>
+    <string name="product_image">Product Image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
