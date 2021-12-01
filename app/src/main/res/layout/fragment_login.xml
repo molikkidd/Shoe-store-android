@@ -19,7 +19,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_orange_light">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -44,14 +45,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/big_margin"
                 android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginEnd="32dp"
                 android:hint="@string/email"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/logo_image">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email_input"
-                    android:layout_width="match_parent"
+                    android:layout_width="349dp"
                     android:layout_height="48dp"
+                    android:background="@android:color/white"
                     android:inputType="text"
                     android:maxLines="1" />
 
@@ -73,6 +77,7 @@
                     android:id="@+id/password_input"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
+                    android:background="@android:color/white"
                     android:imeOptions="actionDone"
                     android:inputType="textPassword"
                     android:maxLines="1"
@@ -85,6 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/small_margin"
+                android:background="@android:color/holo_orange_dark"
                 android:text="@string/login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/big_margin"
                 android:text="@string/don_t_have_an_account"
+                android:textColor="@color/white_text_color"
                 app:layout_constraintEnd_toStartOf="@+id/create_account_button"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="packed"
