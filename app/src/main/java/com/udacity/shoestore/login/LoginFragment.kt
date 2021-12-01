@@ -20,11 +20,7 @@ class LoginFragment : Fragment() {
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_login, container, false
         )
-//connect viewmodel and lifecycle method
-//        viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
-//        binding.loginViewModel = viewModel
-//        binding.lifecycleOwner = viewLifecycleOwner
-//set eventlistener on login button
+
         binding.loginButton.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }

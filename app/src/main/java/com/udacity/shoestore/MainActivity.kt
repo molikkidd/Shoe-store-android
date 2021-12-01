@@ -22,24 +22,14 @@ class MainActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 //    add side menu when page is being rendered
         drawerLayout = binding.drawerLayout
-//connect navcontroller to fragments
-    val navController = this.findNavController(R.id.myNavHostFragment)
-
-    navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, _: Bundle? ->
-        when (nd.id) {
-            nc.graph.startDestination -> {
-                supportActionBar?.setDisplayHomeAsUpEnabled(false)
-            }
-            R.id.shoeListFragment2 -> {
-                supportActionBar?.setDisplayHomeAsUpEnabled(false)
-            }
-        }
-    }
+//connect to navcontroller on act_main.xml
+    val navController = findNavController(R.id.myNavHostFragment)
 //    connect Navi UI to Navi Controller
     NavigationUI.setupWithNavController(binding.navView, navController)
-
-    drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
     appBarConfiguration = AppBarConfiguration(navController.graph)
+    drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+    onSupportNavigateUp()
+
     }
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavHostFragment)

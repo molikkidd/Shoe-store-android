@@ -10,7 +10,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
-import com.udacity.shoestore.databinding.FragmentProductItemBinding
+import com.udacity.shoestore.databinding.FragmentShoeItemBinding
 
 class ShoeListFragment : Fragment() {
 
@@ -25,11 +25,12 @@ class ShoeListFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_list, container, false
         )
-
+//        check the livedata list for changes
         sharedViewModel.listProducts.observe(viewLifecycleOwner, Observer { products ->
+
             products.forEach { product ->
-                val itemBinding: FragmentProductItemBinding =
-                    DataBindingUtil.inflate(inflater, R.layout.fragment_product_item, container, false)
+                val itemBinding: FragmentShoeItemBinding =
+                    DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_item, container, false)
                 itemBinding.shoe = product
                 binding.productsViewgroup.addView(itemBinding.root)
             }

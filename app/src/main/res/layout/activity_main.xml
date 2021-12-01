@@ -8,31 +8,33 @@
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <fragment
+            e<fragment
+
                 android:id="@+id/myNavHostFragment"
                 android:name="androidx.navigation.fragment.NavHostFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:defaultNavHost="true"
-                app:navGraph="@navigation/main_navigation" />
+                app:navGraph="@navigation/main_navigation">
+            </fragment>
 
         </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navView"
-            style="?attr/navigationViewStyle"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            app:menu="@menu/logout_menu"
-            />
+            app:menu="@menu/logout_menu" />
     </androidx.drawerlayout.widget.DrawerLayout>
 
 </layout>

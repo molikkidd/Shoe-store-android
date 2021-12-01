@@ -49,12 +49,4 @@
             android:id="@+id/action_shoeDetails_to_shoeListFragment2"
             app:destination="@id/shoeListFragment2" />
     </fragment>
-    <fragment
-        android:id="@+id/productItemFragment"
-        android:name="com.udacity.shoestore.products.ProductItemFragment"
-        android:label="ProductItemFragment" >
-        <action
-            android:id="@+id/action_productItemFragment_to_shoeListFragment2"
-            app:destination="@id/shoeListFragment2" />
-    </fragment>
 </navigation>
