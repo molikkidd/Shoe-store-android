@@ -50,13 +50,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="productItemFragment">
+                  <entry key="mainActivity">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="1004" />
-                            <option name="y" value="36" />
+                            <option name="x" value="-260" />
+                            <option name="y" value="380" />
                           </Point>
                         </option>
                       </LayoutPositions>

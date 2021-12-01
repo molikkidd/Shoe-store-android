@@ -11,11 +11,12 @@
             name="viewModel"
             type="com.udacity.shoestore.products.ShoeListViewModel" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/small_margin"
-        >
+        android:theme="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_view"
