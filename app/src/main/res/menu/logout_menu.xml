@@ -5,8 +5,5 @@
         android:id="@+id/login"
         android:icon="@drawable/ic_add"
         android:title="@string/logout" />
-    <item
-        android:id="@+id/aboutFragment"
-        android:icon="@drawable/ic_add"
-        android:title="@string/cart" />
+
 </menu>

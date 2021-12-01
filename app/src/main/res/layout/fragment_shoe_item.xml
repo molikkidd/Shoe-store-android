@@ -68,7 +68,6 @@
                 android:id="@+id/ic_favorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/favorite"
                 android:src="@drawable/ic_add"
                 app:fabSize="mini"
                 app:layout_constraintBottom_toBottomOf="@id/product_image"

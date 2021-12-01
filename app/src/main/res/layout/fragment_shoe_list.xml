@@ -64,14 +64,24 @@
                     android:background="@android:color/holo_orange_light"
                     android:drawablePadding="10dp"
                     android:gravity="center_vertical"
-                    android:text="Filter"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:theme="@style/AppTheme"
                     app:drawableStartCompat="@drawable/ic_add"
                     app:layout_constraintBottom_toBottomOf="@+id/divider_view"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/divider_view"
                     app:layout_constraintTop_toTopOf="@+id/divider_view" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/shoe_list"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
@@ -79,7 +89,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginTop="8dp"
             android:background="@android:color/holo_orange_light"
             android:paddingBottom="@dimen/bottom_extra_space"
             android:theme="@android:style/Widget.ScrollView"
@@ -94,13 +104,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/empty_list"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
             </LinearLayout>
 
         </ScrollView>
@@ -109,6 +112,7 @@
             android:id="@+id/create_shoe_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
             android:contentDescription="@string/add_product"
             android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="parent"

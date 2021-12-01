@@ -5,31 +5,17 @@
     <string name="password">Password</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="create_your_account">Create your account</string>
-    <string name="errorEmail">Please make sure email has been entered</string>
-    <string name="errorPassword">Please make sure password has been entered</string>
     <string name="welcome">Welcome</string>
     <string name="instructions">Instructions</string>
-    <string name="product_list">Store</string>
-    <string name="contact">Contact</string>
     <string name="about_text">Welcome to the Shoe Shop! The goal of this app for you to add and store
         your favorite shoes or add the shoes on your wish list. There are a lot options today for shoes
         whether you are a runner, baller, lifter or just want to add a pair of red bottoms to your wishlist
         This application is jus for you. Were excited that you have downloaded that application and
         hope you enjoy its basic application.
     </string>
-    <string name="search">Search</string>
-    <string name="cart">Cart</string>
-    <string name="profile">Profile</string>
-    <string name="address">Address</string>
-    <string name="phone">Phone</string>
-    <string name="email_address">shoestore@fake.com</string>
-    <string name="phone_number">+1–202–555–0130</string>
-    <string name="address_value">2932 Richards Avenue - Tracy, CA</string>
     <string name="logout">Logout</string>
-    <string name="favorite">Like</string>
     <string name="share">Share</string>
-    <string name="empty_list">Shoes List is Empty</string>
-    <string name="best_seller">Best Seller of 2021</string>
+    <string name="shoe_list">Shoes List</string>
     <string name="instruction_subtitle">Read the instructions below</string>
     <string name="show_case">Take a look to our products</string>
     <string name="instruction_navigation">Instructions</string>
@@ -46,13 +32,7 @@
     <string name="add_shoe">Add Shoe</string>
     <string name="cancel_text">Cancel</string>
     <string name="save_text">Save</string>
-    <string name="errorShoeName">Please make sure a shoe name has been entered</string>
-    <string name="errorBrandName">Please make sure a brand name has been entered</string>
-    <string name="errorSize">Please make sure a valid size has been entered</string>
-    <string name="errorDescription">Please make sure a description has been entered</string>
     <string name="add_product">Add Product</string>
     <string name="product_image">Product Image</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="action_settings">Settings</string>
 </resources>
